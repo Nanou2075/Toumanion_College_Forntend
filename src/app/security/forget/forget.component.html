@@ -14,14 +14,15 @@
 
                         <p class="text-black-50 mb-5">Veuillez entrer votre Email !</p>
 
+                        <form [formGroup]="forgetForm" (ngSubmit)="forgetCode()">
                         <div data-mdb-input-init class="form-outline form-black-50 mb-4">
                             <input placeholder="Votre Email " type="email" id="typeEmailX"
-                                class="form-control form-control-lg text-center" />
+                                class="form-control form-control-lg text-center" formControlName="email" />
                         </div>
 
                         <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5"
                             type="submit">Envoyer</button>
-
+                        </form>
 
 
                     </div>
