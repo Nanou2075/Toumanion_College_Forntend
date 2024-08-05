@@ -1,0 +1,115 @@
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+import Swal from 'sweetalert2';
+import { AuthService } from '../../services/auth.service';
+import { LocalStoreService } from '../../services/local-store.service';
+
+@Component({
+  selector: 'app-login',
+  standalone: true,
+  imports: [ReactiveFormsModule,CommonModule,RouterLink],
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
+})
+export class LoginComponent  implements OnInit{
+
+  private router = inject(Router)
+  private authService = inject(AuthService)
+  private localStoreService = inject(LocalStoreService)
+  private fb =inject (FormBuilder)
+  loading: boolean = false;
+  signinForm! : FormGroup ;
+
+
+ 
+
+
+  siginForm() {
+    this.signinForm = this.fb.group({
+      username: ['', [
+        Validators.required,
+        Validators.minLength(1),
+
+      ]
+      ],
+      password: ['', [
+        Validators.required,
+        Validators.minLength(1),
+
+      ]
+      ],
+
+
+    })
+  }
+
+  ngOnInit() {
+   this.siginForm();
+  }
+
+ 
+
+  sigin() {
+    console.log("les valeurs sont",this.signinForm.value)
+      this.loading = true
+     this.localStoreService.clear();
+      if (this.signinForm.valid) {
+        const value = this.signinForm.value;
+        this.authService.signin(value).subscribe({
+          next: (resp) => {
+            sessionStorage.setItem('isConnected', 'true');
+            if (resp.status === 1) { 
+               if (resp.data.mfa === true) {
+                this.localStoreService.storeUsername(value.username);
+                this.localStoreService.storeScan(resp.data.secretImageUri);
+                this.router.navigateByUrl('/authentication');
+              }
+              
+              else {
+                this.localStoreService.storeAccessToken(resp.data.accessToken);
+                this.localStoreService.storeRefreshToken(resp.data.refreshToken);
+                this.router.navigateByUrl('/compte/home');
+              }
+              
+  
+              Swal.fire({
+                icon: "success",
+                text: resp.message,
+                showConfirmButton: false,
+                timer: 1500
+              });
+              
+              
+              this.loading = false
+  
+  
+            }
+  
+  
+  
+          },
+          error: (err) => {
+            this.loading = false
+            if (err.error.status === 0) {
+              this.loading = false
+              Swal.fire({
+                icon: "error",
+                text: err.error.message,
+              });
+  
+            }
+            else if (err.error.status === 2) {
+              this.router.navigateByUrl('/activation');
+            }
+  
+          }
+  
+        }
+  
+        )
+      }
+  
+    }
+}

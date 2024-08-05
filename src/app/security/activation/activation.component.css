@@ -1,0 +1,16 @@
+backgroundImage {
+    background-image:url('https://images.pexels.com/photos/2734512/pexels-photo-2734512.jpeg?cs=srgb&dl=pexels-daejeung-2734512.jpg&fm=jpg');
+    background-position:center;
+    background-size:cover;
+    opacity: 0.9;
+    -webkit-font-smoothing: antialiased;
+    font: normal 10px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive!important;
+  }
+ .card-body{
+   background-color: rgb(212, 211, 210);
+   border-radius: 1rem;
+ }
+ .loginForm{
+   margin-top: 100px;
+ }

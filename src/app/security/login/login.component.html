@@ -1,0 +1,44 @@
+<section class="vh-100 gradient-custom backgroundImage">
+    <div class="container  py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-50">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card text-black card-body   text-center loginForm ">
+  
+  
+            <div class="mb-md-4 mt-md-4 pb-3 ">
+  
+              <div class=" text-center">
+                <img src="assets/images/logo.PNG" class="rounded-circle mb-3" style="width: 125px;" alt="Avatar" />
+              </div>
+  
+              <p class="text-black-50 mb-5">Veuillez entrer votre identifiant et votre mot de passe !</p>
+              <form [formGroup]="signinForm" (ngSubmit)="sigin()">
+  
+  
+                <div data-mdb-input-init class="form-outline form-black-50 mb-4">
+                  <input placeholder="Nom d'utilisateur " type="email" id="typeEmailX"
+                    class="form-control form-control-lg text-center" formControlName="username" />
+                </div>
+  
+                <div data-mdb-input-init class="form-outline form-black-50 mb-4">
+                  <input type="password" placeholder="Mot de passe" id="typePasswordX"
+                    class="form-control form-control-lg text-center" formControlName="password" />
+                </div>
+  
+                <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Mot de passe Oublier ?</a></p>
+  
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5" type="submit">Se
+                  connecter</button>
+  
+              </form>
+  
+            </div>
+  
+  
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>

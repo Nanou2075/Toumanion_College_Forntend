@@ -1,0 +1,56 @@
+.main-container{ 
+    margin: 2.5px;
+     height:50px ;
+     width: 96.2%;
+ }
+ .min-height-600{
+     min-height: 810px;
+ }
+ .no-flex-wrap{
+     flex-wrap: inherit !important;
+ }
+ .content{
+     padding-left: 0 px;
+     padding-right: 0 px;
+     border: none !important;
+     background-color: #eff2f5 !important;
+   
+ }
+ 
+ .card-title{
+     font-weight: 35;
+     font-size: x-large;
+ }
+ .card-icon{
+     font-weight: 35;
+ }
+ 
+ 
+ 
+ 
+ .contenu{
+     height: 50 px;
+ }
+ .menu{
+     margin-right: 15px;
+     margin-left: 15px;
+ }
+ .border-none{
+     border: none !important;
+ }
+ .card-header-warning{
+     background-color: #dae8f5 !important;
+     opacity: 0.5;
+ }
+ .card-header-success{
+     background-color: #dae8f5 !important;
+     opacity: 0.5;
+ }
+ .card-header-danger{
+     background-color: #dae8f5 !important;
+     opacity: 0.5;
+ }
+ .card-header-info{
+     background-color: #dae8f5 !important;
+     opacity: 0.5;
+ }

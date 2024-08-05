@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+.backgroundImage {
+    /* background-image:url('https://images.pexels.com/photos/2734512/pexels-photo-2734512.jpeg?cs=srgb&dl=pexels-daejeung-2734512.jpg&fm=jpg'); */
+    background-image:url('assets/images/bg.jpg');
+    background-position:center;
+    background-size:cover;
+    opacity: 0.9;
+    -webkit-font-smoothing: antialiased;
+    font: normal 10px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive!important;
+  }
+ 
+body{
+  background-color: #eff2f5 !important;
+}
+
+.gradient-custom{
+  background-color: #eff2f5 !important;
+}
+
+.border-none{
+  border: none !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a{
+  cursor: pointer;
+}
