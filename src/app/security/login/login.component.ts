@@ -1,15 +1,16 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth.service';
 import { LocalStoreService } from '../../services/local-store.service';
+import { Utils } from '../../utils/utils';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,RouterLink],
+  imports: [ReactiveFormsModule,CommonModule,RouterLink,NgIf],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -18,6 +19,7 @@ export class LoginComponent  implements OnInit{
   private router = inject(Router)
   private authService = inject(AuthService)
   private localStoreService = inject(LocalStoreService)
+  loadingText = Utils.loadingText;
   private fb =inject (FormBuilder)
   loading: boolean = false;
   signinForm! : FormGroup ;

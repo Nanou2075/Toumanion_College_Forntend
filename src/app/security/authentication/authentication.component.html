@@ -3,7 +3,7 @@
         <div class="row d-flex justify-content-center align-items-center h-50">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card text-black card-body   text-center loginForm ">
-                   
+
                     <div class="mb-md-4 mt-md-4  ">
                         <div class=" text-center">
                             <img src="assets/images/logo.PNG" class="rounded-circle mb-3" style="width: 125px;"
@@ -11,24 +11,29 @@
                         </div>
                         <form [formGroup]="authenticationForm" (ngSubmit)="handleVerifiacation()">
 
-                        <div class=" text-center">
-                            <img src={{qrcode}} class="card-img-top mb-2" alt="..."/>
-                        </div>
+                            <div class=" text-center">
+                                <img src={{qrcode}} class="card-img-top mb-2" alt="..." />
+                            </div>
 
-                        <p class="text-black-50 mb-5">Veuillez entrer votre Code Scanner !</p>
+                            <h4>
+                                <p class="text-black-50 mb-5">Veuillez entrer votre Code Scanner !</p>
+                            </h4>
+                            <div data-mdb-input-init class="form-outline form-black-50 mb-4">
+                                <input placeholder="Votre Code " type="text" maxlength="6" id="typeEmailX"
+                                    class="form-control form-control-lg text-center" formControlName="code" />
+                            </div>
 
-                        <div data-mdb-input-init class="form-outline form-black-50 mb-4">
-                            <input placeholder="Votre Code " type="email" id="typeEmailX"
-                                class="form-control form-control-lg text-center"   formControlName="code" />
-                        </div>
-
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5"
-                            type="submit">Envoyer</button>
-
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5"
+                                [disabled]="!authenticationForm.valid || loading">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm " role="status"
+                                    aria-hidden="true"></span>&nbsp;
+                                <span *ngIf="!loading"> Envoyer</span></button>
                         </form>
 
+
+
                     </div>
-                  
+
 
 
                 </div>

@@ -16,12 +16,13 @@
 
                         <form [formGroup]="forgetForm" (ngSubmit)="forgetCode()">
                         <div data-mdb-input-init class="form-outline form-black-50 mb-4">
-                            <input placeholder="Votre Email " type="email" id="typeEmailX"
+                            <input placeholder="Votre Email " type="email" maxlength="50" id="typeEmailX"
                                 class="form-control form-control-lg text-center" formControlName="email" />
                         </div>
 
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5"
-                            type="submit">Envoyer</button>
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5" [disabled]="!forgetForm.valid || loading"  >
+                            <span *ngIf="loading"  class="spinner-border spinner-border-sm " role="status" aria-hidden="true"></span>&nbsp;
+                           <span *ngIf="!loading"> Envoyer</span></button>
                         </form>
 
 

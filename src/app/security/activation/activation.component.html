@@ -11,15 +11,16 @@
                                 alt="Avatar" />
                         </div>
 
-                        <p class="text-black-50 mb-5">Veuillez entrer votrele  code de verification  !</p>
+                       <h4> <p class="text-black-50 mb-5">Veuillez entrer votrele  code de verification  !</p></h4>
                         <form [formGroup]="activationForm" (ngSubmit)="activedCode()">
                         <div data-mdb-input-init class="form-outline form-black-50 mb-4">
-                            <input placeholder="Votre Code " type="email" id="typeEmailX"
+                            <input placeholder="Votre Code " type="text" maxlength="4" id="typeEmailX"
                                 class="form-control form-control-lg text-center"  formControlName="code"  />
                         </div>
 
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5"
-                            type="submit">Envoyer</button>
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg px-5" [disabled]="!activationForm.valid || loading"  >
+                            <span *ngIf="loading"  class="spinner-border spinner-border-sm " role="status" aria-hidden="true"></span>&nbsp;
+                           <span *ngIf="!loading"> Envoyer</span></button>
                         </form>
 
 
