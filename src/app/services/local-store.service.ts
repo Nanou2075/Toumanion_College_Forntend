@@ -64,7 +64,11 @@ export class LocalStoreService {
 
 
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('accessToken')
+    return !localStorage.getItem('accessToken')
+  }
+
+  isConnected():boolean {
+    return!! localStorage.getItem('isConnected')
   }
 
 

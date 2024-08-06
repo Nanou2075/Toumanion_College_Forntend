@@ -36,6 +36,7 @@ export class HeaderComponent {
 
 
   handleDeconnexion(){
+    sessionStorage.setItem('isConnected', 'false');
     this.authService.signout().subscribe({
       next: (data) => {
         if(data.status===1){
@@ -45,7 +46,7 @@ export class HeaderComponent {
             showConfirmButton: false,
             timer: 1000
           });
-         this.router.navigateByUrl('')
+         this.router.navigateByUrl('/login')
          sessionStorage.setItem('isConnected', 'false');
          localStorage.clear();
         }

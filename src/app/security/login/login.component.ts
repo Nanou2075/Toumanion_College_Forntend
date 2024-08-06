@@ -47,19 +47,19 @@ export class LoginComponent  implements OnInit{
 
   ngOnInit() {
    this.siginForm();
+   this.checkAuth()
   }
 
  
 
   sigin() {
-    console.log("les valeurs sont",this.signinForm.value)
       this.loading = true
      this.localStoreService.clear();
       if (this.signinForm.valid) {
         const value = this.signinForm.value;
         this.authService.signin(value).subscribe({
           next: (resp) => {
-            sessionStorage.setItem('isConnected', 'true');
+        
             if (resp.status === 1) { 
                if (resp.data.mfa === true) {
                 this.localStoreService.storeUsername(value.username);
@@ -71,6 +71,7 @@ export class LoginComponent  implements OnInit{
                 this.localStoreService.storeAccessToken(resp.data.accessToken);
                 this.localStoreService.storeRefreshToken(resp.data.refreshToken);
                 this.router.navigateByUrl('/compte/home');
+                sessionStorage.setItem('isConnected', 'true');
               }
               
   
@@ -112,4 +113,13 @@ export class LoginComponent  implements OnInit{
       }
   
     }
+
+
+    checkAuth() {
+      if (!!this.localStoreService.isConnected) {
+        this.router.navigate(['/compte/home'])      
+       
+       }
+   
+     }
 }
