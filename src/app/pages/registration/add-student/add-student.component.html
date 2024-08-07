@@ -1,91 +1,212 @@
 <section class="vh-50 gradient-custom">
     <div class="container py-5 h-100">
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col-12 col-lg-9 col-xl-7">
-          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-            <div class="card-body p-4 p-md-5 text-center">
-              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Enregistrement d'elève</h3>
-              <form>
-  
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    
-  
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="firstName" placeholder="Prénom" class="form-control form-control-lg" />
-                      <label class="form-label mt-2" for="firstName">Prénom</label>
-                    </div>
-  
-                  </div>
-                  <div class="col-md-6 mb-4">
-  
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="lastName" placeholder=" Nom de Famille" class="form-control form-control-lg" />
-                      <label class="form-label mt-2" for="lastName">Nom de Famille</label>
-                    </div>
-  
-                  </div>
-                </div>
-  
-              
-                  <div class="col-md-12 mb-4 text-center">
-  
-                    <h2 class="mb-2 pb-1">Sexe:</h2>
-  
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                        value="Femme" checked />
-                      <label class="form-check-label" for="femaleGender">Femme</label>
-                    </div>
-  
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                        value="Homme" />
-                      <label class="form-check-label" for="maleGender">Homme</label>
-                    </div>
-  
-                   
-  
-                  </div>
-               
-  
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-          
-                        <select class="select col-md-12 form-control-lg">
-                          <option value="1">Classe</option>
-                          <option value="2">Subject 1</option>
-                          <option value="3">Subject 2</option>
-                          <option value="4">Subject 3</option>
-                        </select>
+        <div class="row h-100">
+            <div class="col-6 col-lg-6 col-xl-6">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5 text-center">
+                        <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Enregistrement d'elève</h2>
 
-                        <label class="form-label mt-2" for="firstName">Classe de l'eleve</label>
-      
-                      </div>
-                      <div class="col-md-6 mb-4">
-          
-                        <select class="select col-md-12 form-control-lg">
-                          <option value="1">Offre</option>
-                          <option value="2">Subject 1</option>
-                          <option value="3">Subject 2</option>
-                          <option value="4">Subject 3</option>
-                        </select>
 
-                        <label class="form-label mt-2" for="firstName">Offre pour l'eleve</label>
-      
-                      </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+
+
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" id="firstName" placeholder="Prénom"
+                                        class="form-control form-control-lg" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" id="lastName" placeholder=" Nom de Famille"
+                                        class="form-control form-control-lg" />
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 mb-5 text-center">
+
+                            <h3 class="mb-5 "><b>Sexe:</b></h3>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                                    value="Femme" checked />
+                                <label class="form-check-label" for="femaleGender">Femme</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                    value="Homme" />
+                                <label class="form-check-label" for="maleGender">Homme</label>
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+
+                                <select class="select col-md-12 form-control-lg">
+                                    <option value="1">Section</option>
+                                    <option value="2">Subject 1</option>
+                                    <option value="3">Subject 2</option>
+                                    <option value="4">Subject 3</option>
+                                </select>
+
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <select class="select col-md-12 form-control-lg">
+                                    <option value="1">Classe</option>
+                                    <option value="2">Subject 1</option>
+                                    <option value="3">Subject 2</option>
+                                    <option value="4">Subject 3</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+
                 </div>
-  
-            
-  
-                <div class="mt-4 pt-2 text-center">
-                  <input data-mdb-ripple-init class="btn btn-primary btn-lg " type="submit" value="Enregistrer" />
-                </div>
-  
-              </form>
             </div>
-          </div>
+            <div class="col-6 col-lg-6 col-xl-6">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+
+                    <div class="card-body p-4 p-md-5 text-center">
+                        <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Paiement de scolarité</h2>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-4">
+
+                                <select class="select col-md-12 form-control-lg">
+                                    <option value="1">Offre</option>
+                                    <option value="2">Subject 1</option>
+                                    <option value="3">Subject 2</option>
+                                    <option value="4">Subject 3</option>
+                                </select>
+
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" id="firstName" placeholder="Montant"
+                                        class="form-control form-control-lg" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+
+                                <select class="select col-md-12 form-control-lg">
+                                    <option value="1">Type</option>
+                                    <option value="2">Subject 1</option>
+                                    <option value="3">Subject 2</option>
+                                    <option value="4">Subject 3</option>
+                                </select>
+
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <select class="select col-md-12 form-control-lg">
+                                    <option value="1">Mode</option>
+                                    <option value="2">Subject 1</option>
+                                    <option value="3">Subject 2</option>
+                                    <option value="4">Subject 3</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+
+                                <select class="select col-md-12 form-control-lg">
+                                    <option value="1">Mois</option>
+                                    <option value="2">Subject 1</option>
+                                    <option value="3">Subject 2</option>
+                                    <option value="4">Subject 3</option>
+                                </select>
+
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" id="firstName" placeholder="Montant"
+                                        class="form-control form-control-lg" />
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12  text-center">
+
+                                <h3 class="text-center"><b>Rémise</b></h3>
+
+                              
+    
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                                        value="Femme" checked />
+                                    <label class="form-check-label" for="femaleGender">Non Rémise</label>
+                                </div>
+    
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                        value="Homme" />
+                                    <label class="form-check-label" for="maleGender">Avec Rémise</label>
+                                </div>
+    
+    
+    
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="mt-4 pt-2 text-center">
+            <input data-mdb-ripple-init class="btn btn-primary btn-lg " type="submit" value="Enregistrer" />
+        </div>
+
     </div>
-  </section>
+</section>
