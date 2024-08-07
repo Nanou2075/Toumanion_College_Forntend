@@ -34,11 +34,10 @@ export class MenuComponent {
       ]
 
     },
-
     {
       id: '2',
-      name: 'Elèves',
-      icon: 'group',
+      name: 'Scolaire',
+      icon: 'card_travel',
       path: '',
       subMenu: [
         {
@@ -50,15 +49,29 @@ export class MenuComponent {
         },
         {
           id: '22',
-          name: 'Statistique',
+          name: 'classe',
           icon: '',
           path: '',
 
         },
 
         {
-          id: '22',
-          name: 'Paiement',
+          id: '23',
+          name: 'modification',
+          icon: '',
+          path: '',
+
+        }, {
+          id: '24',
+          name: 'Offre',
+          icon: '',
+          path: '',
+
+        },
+
+        {
+          id: '25',
+          name: 'section',
           icon: '',
           path: '',
 
@@ -66,37 +79,8 @@ export class MenuComponent {
       ]
 
     },
-    {
-      id: '3',
-      name: 'Emargment',
-      icon: 'event_note',
-      path: '',
-      subMenu: [
-        {
-          id: '31',
-          name: 'vue d\'ensemble',
-          icon: '',
-          path: '',
 
-        },
-        {
-          id: '32',
-          name: 'Statistique',
-          icon: '',
-          path: '',
-
-        },
-
-        {
-          id: '33',
-          name: 'Paiement',
-          icon: '',
-          path: '',
-
-        },
-      ]
-
-    },
+   
     {
       id: '4',
       name: 'Professeur',
@@ -104,23 +88,30 @@ export class MenuComponent {
       path: '',
       subMenu: [
         {
-          id: '41',
-          name: 'vue d\'ensemble',
+          id: '31',
+          name: 'liste',
           icon: '',
           path: '',
 
         },
         {
-          id: '42',
-          name: 'Statistique',
+          id: '32',
+          name: 'Ajouter',
           icon: '',
           path: '',
 
         },
 
         {
-          id: '43',
-          name: 'Paiement',
+          id: '33',
+          name: 'Modification',
+          icon: '',
+          path: '',
+
+        },
+        {
+          id: '34',
+          name: 'emargemnt',
           icon: '',
           path: '',
 
@@ -136,14 +127,14 @@ export class MenuComponent {
       subMenu: [
         {
           id: '51',
-          name: 'vue d\'ensemble',
+          name: 'liste',
           icon: '',
           path: '',
 
         },
         {
           id: '52',
-          name: 'Statistique',
+          name: 'Ajouter',
           icon: '',
           path: '',
 
@@ -151,7 +142,7 @@ export class MenuComponent {
 
         {
           id: '53',
-          name: 'Paiement',
+          name: 'Modification',
           icon: '',
           path: '',
 
@@ -190,10 +181,11 @@ export class MenuComponent {
       ]
 
     },
+  
     {
       id: '7',
-      name: 'Scolaire',
-      icon: 'card_travel',
+      name: 'Elèves',
+      icon: 'group',
       path: '',
       subMenu: [
         {
@@ -205,7 +197,7 @@ export class MenuComponent {
         },
         {
           id: '72',
-          name: 'Statistique',
+          name: 'liste',
           icon: '',
           path: '',
 
